@@ -14,13 +14,13 @@ app.engine("hbs", exphbs.engine({
 })
 );
 
-app.use(express.static('public'));
+app.use(express.static('assets'));
 app.use('/bootstrap', express.static('node_modules/bootstrap/dist'));
 
 app.get('/', (req,res) => {
     res.render('home',{
         title: 'Productos',
-        products: ['banana', 'cebollas','lechuga','papas','pimenton','tomate']
+        products: ['Banana', 'Cebollas','Lechuga','Papas','Pimenton','Tomate']
     });
 });
 
